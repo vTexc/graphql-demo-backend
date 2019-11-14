@@ -3,7 +3,7 @@ const { mongo } = require('../config');
 
 mongoose.start = function () {
   mongoose.connect(
-    `${mongo.url}/${mongo.database}`,
+    `mongodb://${mongo.url}:${mongo.port}`,
     mongo.options,
   );
 
